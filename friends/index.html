@@ -1,0 +1,97 @@
+<script src="header.js"></script>
+<link rel="stylesheet" href="css/index.css">
+<script src="js/jquery.simple-text-rotator.min.js"></script>
+<link rel="stylesheet" href="css/simpletextrotator.css">
+<body>
+    
+    <div id="nav"></div>
+
+    <div id="opening" align="center">
+        <div id="openingOne">
+            <img src="img/bg/bigimg.png" width="99%"><br><br>
+            <h5 style="color: #a6a6a6">
+                Follow the lives of six reckless adults living in Manhattan, as they indulge in adventures which make their lives both troublesome and happening.
+            </h5>
+            <button id="openingForward" class="btn btn-secondary"><i class="material-icons">keyboard_arrow_right</i></button><br>
+        </div>
+        <div id="openingTwo" style="display: none;">
+            <img src="img/bg/friendswritten.png" width="75%"><br><br><br>
+            <div class="text-primary" style="color: #a6a6a6; font-size: 18px;">
+                <i class="material-icons">play_circle_filled</i>
+                Download / Watch all the episodes of Friends for free!
+            </div><br>
+            <div class="text-success" style="color: #a6a6a6; font-size: 18px;">
+                <i class="material-icons">whatshot</i>
+                Find out the most popular character in Friends by some Mathematics & Programming.
+            </div><br>
+            <div class="text-danger" style="color: #a6a6a6; font-size: 18px;">
+                <i class="material-icons">public</i>
+                Explore all the things related to the show, everything. EVERYTHING!!!
+            </div><br>
+            <button id="openingBack" class="btn btn-secondary"><i class="material-icons">keyboard_arrow_left</i></button><br>
+        </div>
+    </div><br><br>
+
+    <script>
+        $(document).ready(function(){
+            $("#openingForward").click(function() {
+                $("#openingOne").hide();
+                $("#openingTwo").fadeIn();
+            });
+            $("#openingBack").click(function() {
+                $("#openingTwo").hide();
+                $("#openingOne").fadeIn();
+            });
+        });
+    </script>
+
+    <div id="des">
+        <button class="btn btn-outline-primary" id="desBtn" data-toggle="modal" data-target="#belike">
+            <i class="material-icons">bubble_chart</i><b> Be like? </b>
+        </button>
+        <button id="myBtnImg" class="btn btn-outline-danger">
+            <i class="material-icons">slideshow</i>
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="belike" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span style="color: #007bff" class="rotate">FLIRT, DRESS, CLEAN, CARE, SING, FUNNY</span>
+                <div style="color: #a6a6a6;">L.I.K.E</div>
+                <span style="color: #007bff" class="rotate">JOEY, RACHEL, MONICA, ROSS, PHOEBE, CHANDLER</span>
+            </div>
+            <div style="margin:0 auto;">
+                <button type="button" style="margin: 10px;" class="btn btn-outline-secondary" data-dismiss="modal"><i class="material-icons">close</i> Close</button>
+                <button type="button" onclick="window.location.href='vote.html'" style="margin: 10px;" class="btn btn-primary"><i class="material-icons">bar_chart</i> <b>Vote</b></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div id="animatedBackground"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#animatedBackground").css({"display": "none", "z-index": "-2", "width": "100%", "height": "100%", "position": "absolute", "top": "0", "left": "0", "background": "url('img/bg/finaltry.png')", "background-repeat": "repeat", "background-position": "0 0", "background-size": "auto 100%", "animation": "animatedBackground 100s linear infinite"});
+            $("#myBtnImg").on('click', function(e){
+                $("#opening").toggle();
+                $("#opening").toggleClass("aniBack");
+                $("#animatedBackground").toggle();
+                $("#animatedBackground").toggleClass("aniBack");
+            });
+        });
+    </script>
+    
+    <script>
+        $(".rotate").textrotator({
+            animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+            separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+            speed: 2000 // How many milliseconds until the next word show.
+        });
+    </script>
+    
+    <script src="nav.js"></script>
+    <script src="footer.js"></script>

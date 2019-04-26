@@ -1,0 +1,53 @@
+<script src="header.js"></script>
+
+<style>
+    .cards {
+        background-color: #343a40;
+        border-radius: 25px;
+    }
+    #centerxy p {
+        color: #a6a6a6;
+        margin: 10px;
+    }
+</style>
+
+    <body>
+
+        <div id="nav"></div>
+
+        <br><br><div class="container" id="centerxy">
+
+            <div class="cards shadow-lg" id="wlcmimg" align="center"><br>
+                <p style="font-size: 15px; font-weight: bold;">With the help of computer programming, I thought of a way of finding the most popular character in friends.</p><br>
+                <button class="btn btn-outline-warning shadow-lg" style="border-radius: 25px;" id="wlcmfun">
+                    <img src="img/central.gif" class="img-fluid">
+                    <p style="font-size: 15px; font-weight: bold;">Click here</p>
+                </button>    
+                <br><br><p style="font-size: 15px; font-weight: bold;">We will calculate the most spoken name in the entire show from the show's script!</p>
+            <br><br></div>
+
+            <div class="cards shadow-lg" id="mergepybox" align="center" style="display: none;"><br>
+                <p>This code combines the <b>scripts/subtitles</b> of all the seasons of Friends TV Series</p>
+                <img src="img/mergepy.PNG" class="img-fluid" alt="Responsive image">
+                <p>and saves it a  file called total.txt for calculation</p>
+                <button class="btn btn-primary" style="margin: 10px; border-radius: 50px;" id="resultpyfun1"><i class="material-icons">arrow_forward_ios</i></button>
+            <br><br></div>
+
+            <div class="cards shadow-lg" id="resultpybox" align="center" style="display: none;"><br>
+                <p>This code <b>counts the frequency</b> of every word spoken & and gathers all the <b>words as characters name!</b></p>
+                <img src="img/resultpy.PNG" class="img-fluid" alt="Responsive image"><br>
+                <button class="btn btn-secondary" style="margin: 10px; border-radius: 50px;" id="mergepyfun"><i class="material-icons">arrow_back_ios</i></button>
+                <button class="btn btn-success" style="margin: 10px; border-radius: 50px;" id="anspyfun"><i class="material-icons">settings</i> <b>Run the Code!</b></button>
+            <br><br></div>
+
+            <div class="cards shadow-lg" id="anspybox" align="center" style="display: none;"><br>
+                <img src="img/anspy.PNG" class="img-fluid" alt="Responsive image"><br>
+                <button class="btn btn-secondary" style="margin: 10px; border-radius: 50px;" id="resultpyfun2"><i class="material-icons">arrow_back_ios</i></button>
+                <button class="btn btn-success" style="margin: 10px; border-radius: 50px;" onclick="window.location.href='answer.html'"><i class="material-icons">input</i> <b>Answers!</b></button>
+            <br><br></div>
+
+        </div>
+
+            <script src="js/comp.js"></script>
+            <script src="nav.js"></script>
+            <script src="footer.js"></script>

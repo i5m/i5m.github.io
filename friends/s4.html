@@ -1,0 +1,41 @@
+<script src="header.js"></script>
+
+<body>
+
+    <div id="nav"></div><br><br>
+
+        <div class="container">
+
+            <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <h3 style="color: #a6a6a6; font-weight: bold; ">Season 4 <i class="material-icons">keyboard_arrow_down</i></h3>
+            </a>
+
+            <div class="collapse" id="collapseExample">
+                <div class="card bg-dark card-body" style="color: #a6a6a6; border-radius: 20px;">
+                    <p>In the Season Four premiere, Ross and Rachel briefly reconcile after Ross pretends to read a long letter that Rachel wrote for him. However, Ross continues to insist that the two were on a break when he slept with Chloe, so they break up again. Joey dates Kathy, a girl that Chandler has a crush on. Kathy and Chandler later kiss, which causes drama between Chandler and Joey. Joey only forgives Chandler after Chandler spends a day in a box as punishment. Phoebe becomes a surrogate mother for her brother and his wife Alice. Monica and Rachel are forced to switch apartments with Joey and Chandler after losing a bet during a quiz game, but manage to switch back by bribing them with Knicks season tickets and a one-minute kiss (off-screen) between Rachel and Monica. Ross begins dating an English woman named Emily (Helen Baxendale), and the season finale features their wedding in London. Chandler and Monica sleep together, and Rachel decides to attend Ross and Emily's wedding. While saying his vows, Ross says Rachel's name at the altar, shocking his bride and the guests.<br>Source: <a target="_BLANK" href="https://en.wikipedia.org/wiki/Friends#Season_2"><u>Wikipedia</u></a></p>
+                </div>
+            </div><br><br>
+
+            <div align="center" id="episodes"></div>
+        
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+        <script>
+            window.onload = function() {
+                lax.setup() // init
+
+                const updateLax = () => {
+                    lax.update(window.scrollY)
+                    window.requestAnimationFrame(updateLax)
+                }
+
+                window.requestAnimationFrame(updateLax)
+            }
+        </script>
+
+        <script src="js/s4.js"></script>
+        <script src="nav.js"></script>
+        <script src="footer.js"></script>
+        
+    
