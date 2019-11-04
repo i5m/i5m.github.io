@@ -1,20 +1,16 @@
 <h2>Please checkout <a href="https://i5m.github.io" target="_BLANK">i5m.github.io</a></h2>
 
-<li>
-    <p>
-        It is a collection of about <b>quater-a-million</b> (250,000) Twitter users data (available open) including thier:<br/>
-        <li>Image URL's</li>
-        <li>Original Name</li>
-        <li>Biography</li>
-        <li>Joined Date</li>
-        <li>Location (subject to availablity)</li>
-        <li>Birthday (subject to availablity)</li>
-        <li>Number of Tweets</li>
-        <li>Number of Likes</li>
-        <li>Number of Followers</li>
-        <li>Number of Following</li>
-    </p>
-</li>
+It is a collection of about <b>quater-a-million</b> (250,000) Twitter users data (available open) including thier:<br/>
+<li>Image URL's</li>
+<li>Original Name</li>
+<li>Biography</li>
+<li>Joined Date</li>
+<li>Location (subject to availablity)</li>
+<li>Birthday (subject to availablity)</li>
+<li>Number of Tweets</li>
+<li>Number of Likes</li>
+<li>Number of Followers</li>
+<li>Number of Following</li>
 
 <li>
     <h3>Files:</h3>
