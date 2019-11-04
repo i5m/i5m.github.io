@@ -26,3 +26,20 @@
 
 <h1>The webesite shows a lot of charts to graphical analyse Twitter users statstics <a href="https://i5m.github.io" target="_BLANK">i5m.github.io</a></h1>
 
+<h4>
+    Use getimages.py program to download all the images with usernames as the image file name.<br/>
+    <b>Requirements:</b><br/>
+    <li>Python 3.x</li>
+    <li>BeautifulSoup</li>
+    <li>requests</li>
+    <li>random</li>
+    <li>csv</li>
+    <li>sys</li><br/>
+    <b>Usage:</b><br/>
+    <u>Works only with CSV Files</u>
+    User have to provide 2 Aruments on the command out of which being the program name itself (getimages.py) and second is the location of CSV file<br/>
+    <b>Example</b><br/>
+    ~/ python3 getimages.py data/1/people.csv
+</h4>
+
+<h2>Random Data Generation</h2>
