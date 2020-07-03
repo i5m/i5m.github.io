@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container { text-align: center; }
+        #searchbox, #searched, #allques { margin: 7px auto; padding: 7px; }
+        h3 { color: green; }
+        input { padding: 10px 20px; border-radius: 100px; border: 1px solid grey; max-width: 400px; width: 85%; }
+        #searched { border-bottom: 5px solid #000000; }
+        .box {
+            text-align: left;
+            background-color: #d9d9d9;
+            margin: 5px;
+            padding: 7px;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 400px;
+            width: 98%;
+            vertical-align: top;
+        }
+        .ans { color: #007bff; }
+        @media screen and (max-width:800px) { .box { margin: 5px auto; } }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="searchbox">
+            <h3>Search a question...?</h3>
+            <input type="text" placeholder="Search..." onkeyup="search_func(this.value)">
+        </div>
+        <div id="searched"></div><br/><br/><br/><br/><br/>
+        <div id="allques"></div>
+    </div>
+
+    <script>
+
+        var allques = document.getElementById("allques");
+        var searched = document.getElementById("searched");
+
+        function injector(data) {
+            var s = '<div id="gridy">';
+            for(var i in data) {
+                s += '<div class="box"><h4 class="ques">' + i + '</h4><h4 class="ans">' + data[i] + '</h4></div>';
+            }
+            s += '</div>';
+            allques.innerHTML = s;
+        }
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                data = JSON.parse(this.responseText);
+                injector(data);
+            }
+        };
+        xhttp.open("GET", "iot.json", true);
+        xhttp.send();
+
+        function search_func(v) {
+            if (v != "") {
+                v = v.toLowerCase();
+                var t = 0;
+                s = 'Here are the results:<br/><br/>';
+                for(var i in data) {
+                    if(i.toLowerCase().includes(v)) {
+                        t++;
+                        s += '<div class="box"><h4 class="ques">' + i + '</h4><h4 class="ans">' + data[i] + '</h4></div>';
+                    }
+                }
+                if(t==0) { searched.innerHTML = '<span style="color: red">No results found</span>'; }
+                else { searched.innerHTML = s; }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
